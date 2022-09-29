@@ -1,0 +1,41 @@
+Db-first
+
+Modellizzare la struttura di una tabella per memorizzare
+ tutti i dati riguardanti delle auto usate messe in vendita
+  da un concessionario
+
+
+  COLONNE                                 TIPO-DATO                  ATTRIBUTO
+
+  id:                                     BIGINT                     PK AUTO_INCREMENT UNIQUE NOT NULL
+  casa di produzione:                     VARCHAR(50)                NOTNULL
+  modello:                                VARCHAR(50)                NOTNULL
+  anno di produzione:                     YEAR                       NOTNULL
+  luogo di produzione:                    VARCHAR(25)                NOTNULL
+  anno prima immatricolazione:            YEAR                       NOTNULL
+  targa:                                  VARCHAR(15)                NOTNULL UNIQUE
+  numero telaio:                          VARCHAR(17)                NOTNULL UNIQUE
+  alimentazione:                          VARCHAR(9)                 DEFAULT(BENZINA)
+  cilindrata:                             VARCHAR(7)                 NOTNULL
+  consumi:                                VARCHAR(7)                 NOTNULL
+  colore carrozzeria:                     VARCHAR(75)                NOTNULL
+  stato carrozeria:                       TEXT                       NULLABLE
+  colore interni:                         VARCHAR(75)                NOTNULL
+  stato interni:                          TEXT                       NULLABLE
+  sistema audio:                          VARCHAR(25)                NOTNULL
+  numero sportelli:                       TINYINT                    NOTNULL
+  cerchi:                                 VARCHAR(50)                NOTNULL
+  pneaumatici:                            VARCHAR(25)                DEFAULT(4 STAGIONI)
+  km percorsi:                            MEDIUMINT                  NOTNULL
+  numero proprietari precedenti:          TINYINT                    DEFAULT(1)
+  ultima revisione:                       DATE                       NOTNULL
+  ultimo bollo:                           DATE                       NOTNULL
+  arrivo:                                 DATE                       NOTNULL
+  prezzo:                                 MEDIUMINT                  NOTNULL
+  commento del rivenditore:               TEXT                       NULLABLE
+
+
+
+
+
+
